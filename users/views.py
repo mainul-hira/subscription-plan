@@ -63,7 +63,7 @@ class RegisterView(generics.CreateAPIView):
             # For testing purpose OTP is printed in Terminal so that we can easily verify Customer
             print("OTP")
             print(generate_otp(customer_phone))
-            return Response({"message":"Registartion Successfull"}, status=status.HTTP_201_CREATED)
+            return Response({"message":"Registartion Successful"}, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors)
 
@@ -85,7 +85,7 @@ class VerifyOTPView(APIView):
             
                 otp_token.used = True
                 otp_token.save()
-                return Response({"message":"Verification Successfull"}, status=status.HTTP_200_OK)
+                return Response({"message":"Verification Successful"}, status=status.HTTP_200_OK)
             return Response({"message":"sorry, your token is not valid or 5 minutes have passed from token request"}, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response(serializer.errors)

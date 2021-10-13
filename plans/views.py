@@ -43,7 +43,7 @@ class PurchasePlanView(generics.CreateAPIView):
                 async_task('plans.tasks.deduct_money', request.user.phone, plan.amount)
 
                 data = PurchasePlanDetailsSerializer(customer_plan).data
-                return Response({"message":"Purchase Plan Successfull", "data":data}, status=status.HTTP_201_CREATED)
+                return Response({"message":"Purchase Plan Successful", "data":data}, status=status.HTTP_201_CREATED)
             else:
                 return Response(serializer.errors)
         except Exception as e:
