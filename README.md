@@ -1,8 +1,8 @@
 # subscription-plan
 
 # API Doc 
-    I have created an API doc for your refrence
-    https://hackmd.io/EFe82MRTRoW_PqG3UoJHoA
+I have created an API doc for your refrence <br/>
+https://hackmd.io/EFe82MRTRoW_PqG3UoJHoA
 
 # Used for Development
     OS: MacOs 
