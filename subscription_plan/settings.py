@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # local app
+    # local apps
     'users',
     'plans',
 
@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'subscription_plan.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'subscription_plan',
+        'NAME': 'subscriptions',
 		'USER': 'postgres',
 		'PASSWORD':'123456',
 		'HOST':'localhost'
@@ -122,7 +122,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -140,3 +140,6 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+
+AUTH_USER_MODEL = 'users.CustomUser'

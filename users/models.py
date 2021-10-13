@@ -64,4 +64,5 @@ class CustomerPhone(models.Model):
 class OTPToken(models.Model):
     otp = models.PositiveIntegerField()
     generated_at = models.DateTimeField(auto_now=True)
+    used = models.BooleanField(default=False)
     customer_phone = models.ForeignKey(CustomerPhone, related_name='otps', null=True, blank=True, on_delete=models.CASCADE)
