@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
-from .models import Plan
+from .models import CustomerPlan, Plan
 
 User = get_user_model()
 
@@ -17,4 +17,11 @@ class PlanSerializer(serializers.ModelSerializer):
     class Meta:
         model = Plan
         fields = ('name', 'amount', 'payment_cycle', 'total_valid_months', 'is_cancellable')
+
+
+class PurchasePlanSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomerPlan
+        fields = ('plan',)
+
 

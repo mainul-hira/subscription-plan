@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # 3rd party packages
     'rest_framework',
     'rest_framework_simplejwt',
+    'django_q',
 ]
 
 MIDDLEWARE = [
@@ -151,4 +152,11 @@ from datetime import timedelta
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+}
+
+
+Q_CLUSTER = {
+    'timeout': 60,
+    'max_attempts':5,
+    'orm': 'default'
 }

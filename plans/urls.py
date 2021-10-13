@@ -10,4 +10,5 @@ router.register(r'plans', PlanViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('purchase-plan/', PurchasePlanView.as_view(), name="purchase-plan"),
 ]
