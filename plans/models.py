@@ -1,5 +1,4 @@
 from django.db import models
-from users.models import CustomerPhone
 from django.conf import settings
 
 

@@ -13,7 +13,7 @@ def deduct_money(phone, amount, daily_process=False):
                 date_diff = date.today() - customer_plan.start_date
                 print(date_diff.days)
                 if date_diff.days % 30 == 0:
-                    deduct_money_from_gateway(phone, amount)
+                    deduct_money_from_gateway(customer_plan.customer.phone, customer_plan.amount)
     else:
         deduct_money_from_gateway(phone, amount)
 
