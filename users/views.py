@@ -33,7 +33,9 @@ class GetCustomToken(APIView):
 
     def post(self, request):
         tokens = CustomTokenPairSerializer(request.data).validate(request.data)
-        if CustomerPhone.objects.filter(phone_no=request.data['phone'], verified=True).exists():
+        if User.objects.get(phone=request.data['phone'], is_superuser=True):
+            return Response({"token": tokens}, status=status.HTTP_201_CREATED)
+        elif CustomerPhone.objects.filter(phone_no=request.data['phone'], verified=True).exists():
             return Response({"token": tokens}, status=status.HTTP_201_CREATED)
         else:
             return Response({"message": "Please verify your phone no first"}, status=status.HTTP_400_BAD_REQUEST)
