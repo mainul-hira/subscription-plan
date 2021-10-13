@@ -8,7 +8,7 @@ class Plan(models.Model):
     name = models.CharField(max_length=100)
     amount = models.DecimalField(max_digits=9, decimal_places=2)
     payment_cycle = models.IntegerField(default=30)
-    durantion = models.IntegerField(default=360)
+    total_valid_months = models.IntegerField(default=12)
     is_cancellable = models.BooleanField(default=False)
 
     def __str__(self) -> str:
