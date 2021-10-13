@@ -2,7 +2,7 @@
 
 # API Doc 
     I have created an API doc for your refrence
-    [https://hackmd.io/EFe82MRTRoW_PqG3UoJHoA](https://hackmd.io/EFe82MRTRoW_PqG3UoJHoA)
+    https://hackmd.io/EFe82MRTRoW_PqG3UoJHoA
 
 # Used for Development
     OS: MacOs 
