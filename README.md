@@ -15,7 +15,7 @@ https://hackmd.io/EFe82MRTRoW_PqG3UoJHoA
 I have provided a backup (subscriptions app backup.sql) to seed data with plan info, Task Scheduler that runs daily at 11 am for deducting money for purchase plans, and a superuser.
 
 **superuser login info** <br/>
-    phone: 01516100273
+    phone: 01516100100
     pass: test@1234
 
 # Customer Registration
